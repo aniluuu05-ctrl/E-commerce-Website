@@ -1,0 +1,532 @@
+
+:root {
+    --cream: #f6f4ec;
+    --white: #fffefa;
+    --green: #31553e;
+    --green-dark: #203d2c;
+    --text: #283c30;
+    --muted: #85877d;
+    --border: #e3e1d7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #706f6f;
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+}
+
+.page {
+    width: 100%;
+    margin-top: auto;
+    max-width: 1440px;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 16px;
+    background: var(--cream);
+    border: 1px solid #fefafa;
+    border-radius: 4px;
+}
+
+/* LEFT PANEL */
+
+.login-panel {
+    min-width: 0;
+    padding: 16px 28px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.brand-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--green);
+    color: white;
+    font-size: 23px;
+}
+
+.back-link {
+    font-size: 9px;
+    color: var(--green);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.login-content {
+    width: 100%;
+    max-width: 420px;
+    margin: 40px auto;
+}
+
+.eyebrow {
+    font-size: 8px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--green);
+}
+
+.login-content h1 {
+    font-size: clamp(27px, 3vw, 36px);
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 9px;
+    font-weight: 700;
+}
+
+.intro {
+    max-width: 360px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+.header{
+    color:black;
+}
+
+.form-group *{
+    margin-bottom: 16px;
+    display: none;
+}
+.form-group.active *{
+    display: block;
+}
+
+
+.form-group > label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 39px;
+    padding: 0 11px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--white);
+    color: var(--text);
+    font: inherit;
+    font-size: 11px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgb(49 85 62 / 10%);
+}
+
+.form-group input::placeholder {
+    color: var(--muted);
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 42px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: -1px;
+    margin-bottom: 22px;
+    font-size: 9px;
+}
+
+.remember-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.remember-option input {
+    accent-color: var(--green);
+    width: 12px;
+    height: 12px;
+}
+
+.text-link {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.text-link:hover,
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.sign-in-button {
+    width: 100%;
+    padding: 0%;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: var(--green);
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.sign-in-button:hover {
+    background: var(--green-dark);
+}
+
+.text-con{
+    text-align: center;
+    margin-top: 10px;
+}
+.signup-text {
+    margin-top: 70px;
+    margin-right: 65px;
+    text-align: left;
+    font-size: 15px;
+    color: var(--muted);
+}
+.create-account {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.security-note {
+    margin-top: 21px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 8px;
+}
+
+.security-note span {
+    margin-right: 5px;
+}
+
+.login-footer {
+    font-size: 8px;
+    color: var(--muted);
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 13px;
+}
+
+.footer-top p a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.footer-top div {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-top div a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 8px;
+}
+
+/* RIGHT PANEL */
+
+.hero-panel {
+    position: relative;
+    min-width: 0;
+    min-height: 620px;
+    overflow: hidden;
+    border-radius: 12px;
+    isolation: isolate;
+    color: white;
+    background: var(--green-dark);
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgb(20 35 25 / 5%) 0%,
+        rgb(20 35 25 / 0%) 35%,
+        rgb(15 35 24 / 30%) 58%,
+        rgb(12 35 24 / 95%) 100%
+    );
+}
+
+.hero-top {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    right: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.quality-badge {
+    display: inline-block;
+    padding: 9px 12px;
+    border-radius: 30px;
+    background: #f8f7ef;
+    color: var(--green);
+    font-size: 8px;
+    white-space: nowrap;
+}
+
+.season-label {
+    font-size: 8px;
+    font-weight: 600;
+    text-align: right;
+    text-shadow: 0 1px 5px rgb(0 0 0 / 35%);
+}
+
+.hero-content {
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+}
+
+.hero-eyebrow {
+    font-size: 8px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.hero-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.hero-description {
+    max-width: 370px;
+    font-size: 11px;
+    line-height: 1.8;
+    color: rgb(255 255 255 / 85%);
+}
+
+.hero-benefits {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 17px;
+    padding-top: 16px;
+    border-top: 1px solid rgb(255 255 255 / 20%);
+    font-size: 9px;
+}
+
+/* TABLETS AND SMALL SCREENS */
+
+@media (max-width: 900px) {
+    body {
+        padding: 16px;
+    }
+
+    .page {
+        grid-template-columns: 1fr 0.9fr;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .login-panel {
+        padding: 14px;
+    }
+
+    .hero-panel {
+        min-height: 600px;
+    }
+
+    .hero-top,
+    .hero-content {
+        left: 18px;
+        right: 18px;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .hero-benefits {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 620px) {
+    body {
+        padding: 0;
+        background: var(--cream);
+    }
+
+    .page {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        min-height: 100vh;
+        padding: 18px;
+        border: none;
+    }
+
+    .login-panel {
+        padding: 8px 2px;
+        min-height: 85vh;
+    }
+
+    .login-content {
+        max-width: 440px;
+        margin: 45px auto;
+    }
+
+    .login-content h1 {
+        font-size: 32px;
+    }
+
+    .intro {
+        font-size: 12px;
+    }
+
+    .form-group input {
+        height: 46px;
+        font-size: 13px;
+    }
+
+    .form-group > label {
+        font-size: 12px;
+    }
+
+    .form-options {
+        font-size: 11px;
+    }
+
+    .sign-in-button {
+        min-height: 46px;
+        font-size: 13px;
+    }
+
+    .signup-text {
+        font-size: 11px;
+    }
+
+    .hero-panel {
+        min-height: 540px;
+    }
+
+    .hero-content h2 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .hero-benefits {
+        flex-direction: column;
+        gap: 13px;
+    }
+}
+
+@media (max-width: 360px) {
+    .back-link {
+        font-size: 8px;
+    }
+
+    .hero-top {
+        left: 12px;
+        right: 12px;
+    }
+
+    .season-label {
+        max-width: 110px;
+    }
+
+    .hero-content {
+        left: 16px;
+        right: 16px;
+        bottom: 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+}
